@@ -9,7 +9,7 @@ const useGetSuggestedUsers = () => {
 
         async function fetchSuggestedUsers() {
             try {
-                const res = await axios.get("https://circleup-3wqg.onrender.com/user/suggested", { withCredentials: true });
+                const res = await axios.get("http://localhost:5500/user/suggested", { withCredentials: true });
                 if (res.data.success) {
                     dispatch(setSuggestedUsers(res.data.users));
                 }

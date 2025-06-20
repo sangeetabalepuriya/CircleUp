@@ -9,7 +9,7 @@ const useGetAllPost = () => {
 
         async function fetchAllPost() {
             try {
-                const res = await axios.get("https://circleup-3wqg.onrender.com/post/all", { withCredentials: true });
+                const res = await axios.get("http://localhost:5500/post/all", { withCredentials: true });
                 console.log("Fetched Posts:", res.data);
                 if (res.data.success) {
                     dispatch(setPosts(res.data.posts));

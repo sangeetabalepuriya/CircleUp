@@ -15,7 +15,7 @@ export default function ForgotPassword() {
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-            const res = await axios.post('https://circleup-3wqg.onrender.com/user/resetpassword', {
+            const res = await axios.post('http://localhost:5500/user/resetpassword', {
                 username,
                 newPassword,
                 confirmPassword

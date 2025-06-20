@@ -15,7 +15,7 @@ export default function ChatPage() {
 
     async function sendMessageHandler(receiverId) {
         try {
-            const res = await axios.post(`https://circleup-3wqg.onrender.com/message/send/${receiverId}`, { textMessage }, {
+            const res = await axios.post(`http://localhost:5500/message/send/${receiverId}`, { textMessage }, {
                 headers: {
                     "Content-Type": "application/json"
                 },
@@ -52,7 +52,7 @@ export default function ChatPage() {
                     <div className='overflow-y-auto flex-1 p-2 '>
                         {
                             suggestedUsers
-                                .filter(userItem => user?.following?.includes(userItem._id)) // ✅ Filter only followed
+                                .filter(userItem => user?.following?.includes(userItem._id)) //  Filter only followed
                                 .map((suggestedUser) => {
                                     const isOnLine = onLineUsers.includes(suggestedUser?._id);
                                     const isSelected = selectedUser?._id === suggestedUser._id;

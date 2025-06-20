@@ -43,14 +43,14 @@ export default function Profile() {
     async function handleFollowUnfollow() {
         try {
             const res = await axios.post(
-                `https://circleup-3wqg.onrender.com/user/followOrUnFollow/${userProfile._id}`,
+                `http://localhost:5500/user/followOrUnFollow/${userProfile._id}`,
                 {},
                 { withCredentials: true }
             );
     
             if (res.data.success) {
                 if (isFollowing) {
-                    dispatch(unfollowUser(userProfile._id));
+                    dispatch(unfollowUser(userProfile._id)); 
                     toast.success("Unfollowed successfully");
                 } else {
                     dispatch(followUser(userProfile._id)); 
@@ -68,7 +68,7 @@ export default function Profile() {
     // Function to open CommentDialog
     async function openCommentDialogHandler(post) {
         try {
-          const res = await axios.get(`https://circleup-3wqg.onrender.com/post/${post._id}`, {
+          const res = await axios.get(`http://localhost:5500/post/${post._id}`, {
             withCredentials: true,
           });
       
