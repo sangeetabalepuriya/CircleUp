@@ -128,7 +128,7 @@ export default function EditProfile() {
                     {loading ? (
                         <button
                             disabled
-                            className='flex items-center gap-2 bg-pink-500 px-4 py-2 rounded-md text-white opacity-70 cursor-not-allowed'
+                            className='flex items-center gap-2 bg-blue-500 px-4 py-2 rounded-md text-white opacity-70 cursor-not-allowed'
                         >
                             <Loader2 className='w-4 h-4 animate-spin' />
                             Please wait
@@ -146,7 +146,3 @@ export default function EditProfile() {
         </div>
     )
 }
-
-
-
-
