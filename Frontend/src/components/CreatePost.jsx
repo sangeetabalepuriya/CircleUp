@@ -32,7 +32,7 @@ export default function CreatePost({ open, setOpen }) {
     if (imagePreview) formData.append("image", file);
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:5500/post/addpost", formData, {
+      const res = await axios.post("https://circleup-mqwe.onrender.com/post/addpost", formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         }, withCredentials: true

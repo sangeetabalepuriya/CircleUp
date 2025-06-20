@@ -32,7 +32,7 @@ export default function Post({ post }) {
     async function likeOrDislikeHandler() {
         try {
             const action = liked ? "dislike" : "like";
-            const res = await axios.get(`http://localhost:5500/post/${action}/${post?._id}`, { withCredentials: true });
+            const res = await axios.get(`https://circleup-mqwe.onrender.com/post/${action}/${post?._id}`, { withCredentials: true });
             if (res.data.success) {
                 const updatedLikes = liked ? postLike - 1 : postLike + 1;
                 setPostLike(updatedLikes);
@@ -54,7 +54,7 @@ export default function Post({ post }) {
     // Comment functionality
     async function commentHandler() {
         try {
-            const res = await axios.post(`http://localhost:5500/post/comment/${post._id}`, { text }, {
+            const res = await axios.post(`https://circleup-mqwe.onrender.com/post/comment/${post._id}`, { text }, {
                 headers: {
                     "Content-Type": "application/json"
                 },
@@ -78,7 +78,7 @@ export default function Post({ post }) {
     // Delete post functionality
     async function deletePostHandler() {
         try {
-            const res = await axios.delete(`http://localhost:5500/post/delete/${post?._id}`, { withCredentials: true });
+            const res = await axios.delete(`https://circleup-mqwe.onrender.com/post/delete/${post?._id}`, { withCredentials: true });
             if (res.data.success) {
                 const updatedPostData = posts.filter((postItem) => postItem?._id !== post?._id);
                 dispatch(setPosts(updatedPostData));
@@ -93,7 +93,7 @@ export default function Post({ post }) {
     // Bookmark functionality
     async function bookmarkHandler() {
         try {
-            const res = await axios.get(`http://localhost:5500/post/bookmark/${post?._id}`, { withCredentials: true });
+            const res = await axios.get(`https://circleup-mqwe.onrender.com/post/bookmark/${post?._id}`, { withCredentials: true });
             if (res.data.success) {
                 if (res.data.type === "saved") {
                     dispatch(updateBookmark({ postId: post._id, type: "add" }));
@@ -111,7 +111,7 @@ export default function Post({ post }) {
     async function handleFollowToggle() {
         try {
             const res = await axios.post(
-                `http://localhost:5500/user/followOrUnFollow/${post.author._id}`,
+                `https://circleup-mqwe.onrender.com/user/followOrUnFollow/${post.author._id}`,
                 {},
                 { withCredentials: true }
             );

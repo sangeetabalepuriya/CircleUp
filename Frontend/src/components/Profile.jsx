@@ -43,7 +43,7 @@ export default function Profile() {
     async function handleFollowUnfollow() {
         try {
             const res = await axios.post(
-                `http://localhost:5500/user/followOrUnFollow/${userProfile._id}`,
+                `https://circleup-mqwe.onrender.com/user/followOrUnFollow/${userProfile._id}`,
                 {},
                 { withCredentials: true }
             );
@@ -68,7 +68,7 @@ export default function Profile() {
     // Function to open CommentDialog
     async function openCommentDialogHandler(post) {
         try {
-          const res = await axios.get(`http://localhost:5500/post/${post._id}`, {
+          const res = await axios.get(`https://circleup-mqwe.onrender.com/post/${post._id}`, {
             withCredentials: true,
           });
       

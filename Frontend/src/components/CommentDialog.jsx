@@ -46,7 +46,7 @@ export default function CommentDialog({ open, setOpen }) {
 
   async function sendMessageHandler() {
     try {
-      const res = await axios.post(`http://localhost:5500/post/comment/${selectedPost?._id}`, { text }, {
+      const res = await axios.post(`https://circleup-mqwe.onrender.com/post/comment/${selectedPost?._id}`, { text }, {
         headers: {
           "Content-Type": "application/json"
         },
@@ -71,7 +71,7 @@ export default function CommentDialog({ open, setOpen }) {
   async function handleFollowToggle() {
     try {
       const res = await axios.post(
-        `http://localhost:5500/user/followOrUnFollow/${selectedPost.author._id}`,
+        `https://circleup-mqwe.onrender.com/user/followOrUnFollow/${selectedPost.author._id}`,
         {},
         { withCredentials: true }
       );
@@ -108,7 +108,7 @@ export default function CommentDialog({ open, setOpen }) {
   // Delete post functionality
   async function deletePostHandler() {
     try {
-      const res = await axios.delete(`http://localhost:5500/post/delete/${selectedPost?._id}`, { withCredentials: true });
+      const res = await axios.delete(`https://circleup-mqwe.onrender.com/post/delete/${selectedPost?._id}`, { withCredentials: true });
       if (res.data.success) {
         const updatedPostData = posts.filter((postItem) => postItem?._id !== selectedPost?._id);
         dispatch(setPosts(updatedPostData));

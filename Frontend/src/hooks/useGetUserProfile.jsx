@@ -11,7 +11,7 @@ const useGetUserProfile = (userId) => {
         async function fetchUserProfile() {
             
             try {
-                const res = await axios.get(`http://localhost:5500/user/profile/${userId}`, { withCredentials: true });
+                const res = await axios.get(`https://circleup-mqwe.onrender.com/user/profile/${userId}`, { withCredentials: true });
                 if (res.data.success) {
                     dispatch(setUserProfile(res.data.user));
                 }

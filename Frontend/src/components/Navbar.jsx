@@ -20,7 +20,7 @@ export default function Navbar() {
 
     async function logOutHandler() {
         try {
-            const res = await axios.get("http://localhost:5500/user/logout", { withCredentials: true });
+            const res = await axios.get("https://circleup-mqwe.onrender.com/user/logout", { withCredentials: true });
             if (res.data.success) {
                 dispatch(setAuthUser(null));
                 dispatch(setSelectedPost(null));
@@ -57,7 +57,7 @@ export default function Navbar() {
             label: "Profile",
             icon: (
                 <img
-                    src={user?.profilePicture || "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/RM_at_W_Korea_Love_Your_W%2C_November_2023.jpg/1200px-RM_at_W_Korea_Love_Your_W%2C_November_2023.jpg"}
+                    src={user?.profilePicture}
                     alt="profile"
                     className="w-7 h-7 rounded-full object-cover"
                 />

@@ -25,7 +25,7 @@ export default function Login() {
         console.log(input);
         try {
             setLoading(true);
-            const res = await axios.post("http://localhost:5500/user/login", input, {
+            const res = await axios.post("https://circleup-mqwe.onrender.com/user/login", input, {
                 headers: {
                     "Content-Type": "application/json"
                 },
