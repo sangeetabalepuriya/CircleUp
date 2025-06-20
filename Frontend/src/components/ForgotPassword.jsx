@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
-import { Eye, EyeOff } from 'lucide-react'; // ✅ eye icons
+import { Eye, EyeOff } from 'lucide-react'; 
 
 export default function ForgotPassword() {
     const [username, setUsername] = useState('');
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [showPassword, setShowPassword] = useState(false); // toggle state
+    const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const navigate = useNavigate();
 

@@ -27,29 +27,3 @@ export default function Comment({ comment }) {
         </div>
     );
 }
-
-
-
-
-
-
-
-// import React from 'react'
-
-// export default function Comment({ comment }) {
-//     return (
-//         <div className='my-2'>
-//             <div className='flex gap-3 items-center'>
-//                 <div className="w-10 h-10 rounded-full overflow-hidden">
-//                     <img
-//                         className="w-full h-full object-cover"
-//                         src={comment?.author?.profilePicture}
-//                         alt="user_profile"
-//                     />
-//                 </div>
-//                 <h1 className='font-bold text-sm text-white'>{comment?.author.username} <span className='font-normal pl-1 text-white'>{comment?.text}</span></h1>
-//             </div>
-
-//         </div>
-//     )
-// }

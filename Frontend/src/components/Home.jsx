@@ -8,7 +8,7 @@ export default function Home() {
   useGetAllPost();
   useGetSuggestedUsers();
   return (
-    <div className="flex justify-center pl-64"> {/* Add padding-left here */}
+    <div className="flex justify-center pl-64">
       <div className="flex w-full max-w-6xl">
         <div className="flex-grow max-w-2xl mx-auto">
           <Feed />

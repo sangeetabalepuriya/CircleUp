@@ -19,9 +19,6 @@ export default function Messages({ selectedUser }) {
         }
       }, [messages, selectedUser?._id]);
       
-      
-      
-
     return (
         <div className='flex flex-col h-full bg-neutral-900'>
 
@@ -64,7 +61,6 @@ export default function Messages({ selectedUser }) {
                             </div>
                         ))
                     }
-                    {/* <div ref={messagesEndRef} /> */}
                 </div >
                 
 

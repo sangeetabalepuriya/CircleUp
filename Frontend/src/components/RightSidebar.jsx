@@ -36,39 +36,3 @@ export default function RightSidebar() {
 
 
 
-
-// import React from 'react'
-// import { useSelector } from 'react-redux'
-// import { Link } from 'react-router-dom';
-// import SuggestedUsers from './SuggestedUsers';
-
-// export default function RightSidebar() {
-
-//   const { user } = useSelector(store => store.auth);
-
-//   return (
-//     <div className='w-fit my10 pr-32 ml-12'>
-//       <div className="flex items-center gap-3">
-//         <Link to={`/profile/${user?._id}`}>
-//           <div className="w-10 h-10 rounded-full overflow-hidden">
-//             <img
-//               className="w-full h-full object-cover"
-//               src={user?.profilePicture}
-//               alt="user_profile"
-//             />
-//           </div>
-//         </Link>
-
-//         <div className='flex flex-col'>
-//           <p className="text-sm font-semibold"><Link to={`/profile/${user?._id}`} >{user?.username}</Link></p>
-//           <span className='text-xs text-gray-600'>{user?.bio || "Bio here..."}</span>
-//         </div>
-//       </div>
-//       <SuggestedUsers/>
-//     </div>
-//   )
-// }
-
-
-
-
