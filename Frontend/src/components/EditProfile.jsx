@@ -36,7 +36,7 @@ export default function EditProfile() {
         }
         try {
             setLoading(true);
-            const res = await axios.post("http://localhost:5500/user/profile/edit", formData, {
+            const res = await axios.post("https://circleup-3wqg.onrender.com/user/profile/edit", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data"
                 },

@@ -15,7 +15,7 @@ export default function ChatPage() {
 
     async function sendMessageHandler(receiverId) {
         try {
-            const res = await axios.post(`http://localhost:5500/message/send/${receiverId}`, { textMessage }, {
+            const res = await axios.post(`https://circleup-3wqg.onrender.com/message/send/${receiverId}`, { textMessage }, {
                 headers: {
                     "Content-Type": "application/json"
                 },

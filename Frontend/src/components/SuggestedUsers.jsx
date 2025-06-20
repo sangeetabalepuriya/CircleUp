@@ -16,7 +16,7 @@ export default function SuggestedUsers() {
     async function handleFollowToggle(targetUserId) {
         try {
             const res = await axios.post(
-                `http://localhost:5500/user/followOrUnFollow/${targetUserId}`,
+                `https://circleup-3wqg.onrender.com/user/followOrUnFollow/${targetUserId}`,
                 {},
                 { withCredentials: true }
             );

@@ -23,7 +23,7 @@ export default function SignUp() {
         console.log(input);
         try {
             setLoading(true);
-            const res = await axios.post("http://localhost:5500/user/register", input, {
+            const res = await axios.post("https://circleup-3wqg.onrender.com/user/register", input, {
                 headers: {
                     "Content-Type": "application/json"
                 },
